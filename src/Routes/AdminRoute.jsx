@@ -17,7 +17,7 @@ import AdminPayments from "../pages/dashboard/payments/AdminPayments";
 import EditDoctor from "../pages/dashboard/doctor/EditDoctor";
 import ViewPatientProfile from "../pages/dashboard/patient/ViewPatientProfile";
 import EditPatient from "../pages/dashboard/patient/EditPatient";
-import DicomUpload from "../pages/dashboard/doctor/dicomupload";
+// import DicomUpload from "../pages/dashboard/doctor/dicomupload";
 // import Soon from "../pages/Soon";
 
 const AdminRoute = () => {
@@ -29,11 +29,14 @@ const AdminRoute = () => {
           <Route path="/login" element={<Login />}></Route>
           <Route path="/dashboard" element={<Dashboard />}></Route>
 
-          <Route path="/upload-dicom-file" element={<DicomUpload />}></Route>
+          {/* <Route path="/upload-dicom-file" element={<DicomUpload />}></Route> */}
 
           <Route path="/add-doctor" element={<AddDoctor />}></Route>
           <Route path="/view-doctors" element={<ViewDoctor />}></Route>
-          <Route path="/main-doctor/:doctorId" element={<DoctorProfile />}></Route>
+          <Route
+            path="/main-doctor/:doctorId"
+            element={<DoctorProfile />}
+          ></Route>
           <Route path="/edit-doctor/:id" element={<EditDoctor />}></Route>
           <Route path="/view-patients" element={<ViewPatient />}></Route>
           <Route
@@ -41,7 +44,10 @@ const AdminRoute = () => {
             element={<ViewPatientProfile />}
           ></Route>
           <Route path="/add-patient" element={<AddPatient />}></Route>
-          <Route path="/edit-patient/:patientId" element={<EditPatient />}></Route>
+          <Route
+            path="/edit-patient/:patientId"
+            element={<EditPatient />}
+          ></Route>
           <Route path="/add-department" element={<AddDepartment />}></Route>
           <Route path="/view-department" element={<ViewDepartment />}></Route>
           <Route
